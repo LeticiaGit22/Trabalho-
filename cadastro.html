@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+    <section class="forms-container">
+        <div class="container">
+            <form action="server.php" method="post">
+                <h1>Cadastre seu Pet</h1>
+                <p>Preencha todos os dados sobre o seu pet</p>
+
+                <div class="grupo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="username" class="controle" name="nome" required>
+                </div>
+
+                <div class="grupo">
+                    <p>Gênero:</p>
+                    <div>
+                        <input type="radio" id="male" class="controle" name="genero" value="masculino" required>
+                        <label for="male">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="female" class="controle" name="genero" value="feminino" required>
+                        <label for="female">Feminino</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="others" class="controle" name="genero" value="outros" required>
+                        <label for="others">Outros</label>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <label for="email">E-mail:</label>
+                    <input class="controle" type="email" id="email" name="email" required>
+                </div>
+
+                <div class="grupo">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX" required>
+                </div>
+
+                <div class="grupo">
+                    <label for="nomePet">Nome do Pet:</label>
+                    <input type="text" id="namepet" class="controle" name="nomepet">
+                </div>
+
+                <div class="form-group">
+                    <label for="especie">Espécie:</label>
+                    <select id="especie" name="especie" required>
+                        <option value="">Selecione</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="grupo">
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="racapet" class="controle" name="petraca">
+                </div>
+
+                <div class="form-group">
+                    <label for="data_nascimento">Data de Nascimento do Pet:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento">
+                </div>
+
+                <div class="form-group">
+                    <label for="foto_pet">Foto do Pet:</label>
+                    <input type="file" id="foto_pet" name="foto_pet">
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso do Pet (kg):</label>
+                    <input type="number" id="peso" name="peso" step="0.1" min="0" placeholder="Ex: 5.5">
+                </div>
+
+                <div class="form-group">
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Cadastrar">
+                </div>
+
+
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
