@@ -6,89 +6,120 @@
     <link rel="stylesheet" href="style.css">
     <title>Formulário de Cadastro</title>
 </head>
-
 <body>
+    <header>
+        <h1>CLÍNICA DE PETS</h1>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="cadastro.html">CADASTRO</a></li>
+            <li><a href="desenvolvedores.html">DESENVOLVEDORES</a></li>
+            <li><a href="server.php">DADOS DO FORMULÁRIO</a></li>
+        </ul>
+    </nav>
+
     <section class="forms-container">
         <div class="container">
             <form action="server.php" method="post">
                 <h1>Cadastre seu Pet</h1>
-                <p>Preencha todos os dados sobre o seu pet</p>
+                <p>Preencha os dados do tutor, do pet e os serviços desejados</p>
 
-                <div class="grupo">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="username" class="controle" name="nome" required>
-                </div>
-
-                <div class="grupo">
-                    <p>Gênero:</p>
-                    <div>
-                        <input type="radio" id="male" class="controle" name="genero" value="masculino" required>
-                        <label for="male">Masculino</label>
+                <!-- Dados do Tutor -->
+                <fieldset>
+                    <legend>Dados do Tutor</legend>
+                    <div class="grupo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="username" class="controle" name="nome" required>
                     </div>
-                    <div>
-                        <input type="radio" id="female" class="controle" name="genero" value="feminino" required>
-                        <label for="female">Feminino</label>
+
+                    <div class="grupo">
+                        <label for="email">E-mail:</label>
+                        <input class="controle" type="email" id="email" name="email" required>
                     </div>
-                    <div>
-                        <input type="radio" id="others" class="controle" name="genero" value="outros" required>
-                        <label for="others">Outros</label>
+
+                    <div class="grupo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX" required>
                     </div>
-                </div>
-                <div class="grupo">
-                    <label for="email">E-mail:</label>
-                    <input class="controle" type="email" id="email" name="email" required>
-                </div>
+                </fieldset>
 
-                <div class="grupo">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX" required>
-                </div>
+                <!-- Dados do Pet -->
+                <fieldset>
+                    <legend>Dados do Pet</legend>
+                    <div class="grupo">
+                        <label for="nomePet">Nome do Pet:</label>
+                        <input type="text" id="namepet" class="controle" name="nomepet">
+                    </div>
 
-                <div class="grupo">
-                    <label for="nomePet">Nome do Pet:</label>
-                    <input type="text" id="namepet" class="controle" name="nomepet">
-                </div>
+                    <div class="form-group">
+                        <label for="especie">Espécie:</label>
+                        <select id="especie" name="especie" required>
+                            <option value="">Selecione</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                            <option value="ave">Ave</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
 
+                    <div class="grupo">
+                        <label for="raca">Raça:</label>
+                        <input type="text" id="racapet" class="controle" name="petraca">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data_nascimento">Data de Nascimento do Pet:</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto_pet">Foto do Pet:</label>
+                        <input type="file" id="foto_pet" name="foto_pet">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="peso">Peso do Pet (kg):</label>
+                        <input type="number" id="peso" name="peso" step="0.1" min="0" placeholder="Ex: 5.5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="macho">Sexo:</label>
+                        <input type="radio" name="sexo" value="femea">Fêmea
+                        <input type="radio" name="sexo" value="macho">Macho
+                    </div>
+                </fieldset>
+
+                <!-- Serviços Desejados -->
+                <fieldset>
+                    <legend>Serviços Desejados</legend>
+                    <div class="form-group">
+                        <label><input type="checkbox" name="servicos[]" value="banho"> Banho</label>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" name="servicos[]" value="tosa"> Tosa</label>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" name="servicos[]" value="vacinacao"> Vacinação</label>
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" name="servicos[]" value="consulta"> Consulta Veterinária</label>
+                    </div>
+                </fieldset>
+
+                <!-- Botões -->
                 <div class="form-group">
-                    <label for="especie">Espécie:</label>
-                    <select id="especie" name="especie" required>
-                        <option value="">Selecione</option>
-                        <option value="cachorro">Cachorro</option>
-                        <option value="gato">Gato</option>
-                        <option value="ave">Ave</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
-
-                <div class="grupo">
-                    <label for="raca">Raça:</label>
-                    <input type="text" id="racapet" class="controle" name="petraca">
-                </div>
-
-                <div class="form-group">
-                    <label for="data_nascimento">Data de Nascimento do Pet:</label>
-                    <input type="date" id="data_nascimento" name="data_nascimento">
-                </div>
-
-                <div class="form-group">
-                    <label for="foto_pet">Foto do Pet:</label>
-                    <input type="file" id="foto_pet" name="foto_pet">
-                </div>
-
-                <div class="form-group">
-                    <label for="peso">Peso do Pet (kg):</label>
-                    <input type="number" id="peso" name="peso" step="0.1" min="0" placeholder="Ex: 5.5">
-                </div>
-
-                <div class="form-group">
-                    <input type="reset" value="Limpar">
                     <input type="submit" value="Cadastrar">
+                    <input type="reset" value="Limpar">
                 </div>
-
-
             </form>
         </div>
     </section>
-    
+
+    <!-- Rodapé -->
+    <footer>
+        <p>IFRN campus Santa Cruz | Trabalho de Autoria Web | Prof. Marcelo Figueiredo Barbosa Júnior</p>
+        <p>Desenvolvido por: Alexsandra Roberta Confessor Silva, Letícia Lorrany Carvalho Maia, Victor Gabriel Maia de Souza</p>
+    </footer>
 </body>
 </html>
