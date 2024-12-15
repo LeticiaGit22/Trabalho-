@@ -200,3 +200,71 @@ input[type="reset"]:hover {
         font-size: 14px; /* Texto menor */
     }
 }
+
+
+
+
+/* Estilo da seção de desenvolvedores */
+.desenvolvedores {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    background-color: #44ba71; /* Fundo verde claro */
+}
+
+.desenvolvedores .container {
+    background: #fff; /* Fundo branco */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+    width: 100%;
+    max-width: 1000px; /* Ajusta o tamanho máximo */
+}
+
+/* Estilo do título principal e descrição */
+.desenvolvedores h2 {
+    font-size: 28px;
+    color: #0a130b;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.desenvolvedores p {
+    color: #2a2828;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Estilo da equipe */
+.equipe {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os membros */
+}
+
+/* Estilo de cada membro da equipe */
+.membro {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px; /* Largura fixa para cada membro */
+}
+
+.membro img {
+    width: 100px; /* Tamanho das imagens */
+    height: 100px;
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-bottom: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+.membro h3 {
+    font-size: 18px;
+    color: #0a130b;
+    margin-bottom: 1
+}
